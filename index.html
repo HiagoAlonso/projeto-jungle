@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="images/bird1.png" id="bird1">
+        <img src="images/bird2.png" id="bird2">
+        <img src="images/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="images/rocks.png" id="rocks">
+        <img src="images/water.png" id="water">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae perferendis vel veritatis! Magnam nostrum a consequuntur illo porro. Numquam quidem, consectetur a enim porro nulla ad minima sunt similique asperiores. Ex molestiae dolores nisi reprehenderit, necessitatibus suscipit! Id animi eius aut expedita quas quaerat voluptatibus et error obcaecati. Quasi hic officia ad rem modi numquam consectetur ex explicabo saepe eius. Expedita vero suscipit corporis inventore praesentium ab cumque accusamus voluptas, hic placeat magnam numquam voluptates soluta illo ex ipsum! Placeat assumenda quisquam ex tenetur corrupti minus quo iure quibusdam debitis! <br><br> Provident pariatur minima quibusdam adipisci consequuntur sunt tempora officiis corporis ipsa? Obcaecati eos ipsum quaerat adipisci voluptas, maiores minima laborum pariatur corrupti libero ullam! Tenetur cupiditate hic saepe obcaecati non? Quibusdam, mollitia! Alias ut enim natus corrupti laudantium modi cupiditate dolorum nemo dolores rerum aspernatur quia cum perferendis porro maiores, voluptas eos laboriosam dignissimos quibusdam repellendus impedit. Necessitatibus, esse ab! <br><br> Optio sed quas harum similique ad magnam repellendus vel voluptatum! Consectetur, exercitationem eaque. Quaerat repellendus corporis distinctio exercitationem, eos laudantium accusamus, architecto quos dolorum reprehenderit voluptates quibusdam recusandae minus. Doloremque! <br><br> Qui, quibusdam incidunt dignissimos soluta velit ratione, reiciendis mollitia quos expedita id quas. Molestias distinctio pariatur explicabo recusandae consequatur laboriosam, maiores optio iure, fugiat sunt dolor quod similique unde debitis? <br><br> Culpa consectetur ipsam fugiat! Dicta tempore corporis omnis praesentium debitis beatae. Dolores mollitia commodi minima ad fugiat ea ratione minus amet enim magnam eius qui laudantium praesentium veniam, expedita veritatis. <br><br> Hic ut deserunt recusandae veniam impedit aut quos ullam tenetur, maiores vero temporibus, eligendi, atque sint ex architecto suscipit obcaecati alias at. Officiis voluptas eaque ipsum nobis porro asperiores incidunt. Laboriosam rerum maiores odio. Inventore velit repudiandae voluptate praesentium accusamus ipsa, perferendis dolor quam cum, voluptates minus nostrum? Error assumenda, provident cupiditate minima fugiat repudiandae tempore laudantium exercitationem numquam reprehenderit.</p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY
+
+            text.style.top = 35 + value * 0.1 + '%'
+            bird1.style.top = value * -1.5 + 'px'
+            bird1.style.left = value * 2 + 'px'
+            bird2.style.top = value * -1.5 + 'px'
+            bird2.style.left = value * -5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            rocks.style.top = value * 0.12 + 'px'
+            forest.style.top = value * 0.25 + 'px'
+            header.style.top = value * 0.5 + 'px'
+        })
+    </script>
+</body>
+</html>
